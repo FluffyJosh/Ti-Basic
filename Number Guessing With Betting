@@ -1,0 +1,77 @@
+Lbl ST
+100->M
+ClrHome
+Menu("CHOOSE A RANGE","1-3",A,"1-10",B,"QUIT",QU
+
+Lbl QU
+ClrHome
+Stop
+
+Lbl A
+Disp "INPUT A BET"
+Disp N
+Input C
+Pause
+Disp "INPUT NUM 1-3"
+Input A
+If A>3
+Goto ST
+Else
+randInt(1,3)->B
+If B=A
+Then
+Disp "YOU WIN!"
+Pause
+M+C->N
+Goto ST
+Else
+Disp "YOU LOSE"
+Pause
+M-C->N
+Goto ST
+
+Lbl B
+Disp "INPUT A BET"
+Disp N
+Input C
+Pause
+Disp "INPUT NUM 1-10"
+Input A
+If A>10
+Goto ST
+Else
+randInt(1,10)->B
+If B=A
+Then
+Disp "YOU WIN!"
+Pause
+M+C->N
+Goto ST
+Else
+Disp "YOU LOSE"
+Pause
+M-C->N
+Goto ST
+
+Lbl C
+Disp "INPUT BET"
+Disp N
+Input C
+Pause
+Disp "INPUT NUM 1-20"
+Input A
+If A>20
+Goto ST
+Else
+randInt(1,20)->B
+If B=A
+Then
+Disp "YOU WIN!"
+Pause
+M+C->N
+Goto ST
+Else
+Disp "YOU LOSE"
+Pause
+M-C->N
+Goto ST
